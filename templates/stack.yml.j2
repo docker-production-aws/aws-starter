@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: AWS CloudFormation Starter Template
+
+Parameters:
+  MyStackInput:
+    Type: Number
+    Description: A random number
+
+Resources:
+  StarterBucket{{ config_my_stack_input }}:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName:
+        Fn::Sub: "${AWS::AccountId}-starter-bucket-${MyStackInput}"
+      Tags:
+        - Key: Name
+          Value: 
+            Fn::Sub: "${AWS::AccountId}-starter-bucket-${MyStackInput}"

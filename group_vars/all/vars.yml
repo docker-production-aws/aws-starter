@@ -1,0 +1,16 @@
+---
+# Add global settings here
+
+# aws-cloudformation role settings
+cf_stack_name: "aws-starter"
+
+# By default the aws-cloudformation role expects your stack template 
+# to be defined in the templates/stack.yml.j2 file
+#
+# Alternatively you can use a template published in the aws-cloudformation role
+# See https://github.com/docker-production-aws/aws-cloudformation
+# cf_stack_template: 'templates/network.yml.j2'
+
+# Define stack inputs as required
+cf_stack_inputs:
+  MyStackInput: "{{ config_my_stack_input }}"
