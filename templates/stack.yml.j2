@@ -8,12 +8,12 @@ Parameters:
     Description: A random number
 
 Resources:
-  StarterBucket{{ config_my_stack_input }}:
+  StarterBucket{{ Stack.Inputs.MyStackInput }}:
     Type: "AWS::S3::Bucket"
     Properties:
       BucketName:
-        Fn::Sub: "${AWS::AccountId}-starter-bucket-${MyStackInput}"
+        Fn::Sub: ${AWS::AccountId}-starter-bucket-${MyStackInput}
       Tags:
         - Key: Name
           Value: 
-            Fn::Sub: "${AWS::AccountId}-starter-bucket-${MyStackInput}"
+            Fn::Sub: ${AWS::AccountId}-starter-bucket-${MyStackInput}

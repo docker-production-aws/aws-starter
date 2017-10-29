@@ -4,8 +4,9 @@
 # aws-sts settings
 # At a minimum you must specify the ARN of the IAM role
 # that should be assumed to run your provisinoing tasks
-# e.g. sts_role_arn: "arn:aws:iam::012345678901:role/admin"
-sts_role_arn: "ARN of your IAM role"
+# e.g. Sts.Role: arn:aws:iam::012345678901:role/admin
+# Sts.Role: <ARN of your IAM role>
+Sts.Role: arn:aws:iam::543279062384:role/admin
 
 # environment specific settings are always prefixed with config_
-config_my_stack_input: "{{ 10000 | random }}"
+Stack.Inputs.MyStackInput: "{{ 10000 | random }}"
