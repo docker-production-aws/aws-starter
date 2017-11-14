@@ -25,7 +25,7 @@ environment/%:
 
 generate/%:
 	${INFO} "Generating templates for $*..."
-	@ ansible-playbook site.yml -e 'Sts.Disable=true' -e env=$* $(FLAGS) --tags generate
+	@ ansible-playbook site.yml -e 'Sts.Disabled=true' -e env=$* $(FLAGS) --tags generate
 	${INFO} "Generation complete"
 
 deploy/%:
