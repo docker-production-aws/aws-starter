@@ -65,7 +65,7 @@ $ brew link --overwrite python
 1. Fork this repository to your own new repository
 2. Review [`roles/requirements.yml`](./roles/requirements.yml) and modify if required
 3. Install roles by running `make roles` (which executes `ansible-galaxy install -r roles/requirements.yml`)
-4. Define environments in the [`inventory`](./inventory) file and [`group_vars`](./group_vars) folder
+4. Define environments in the [`inventory`](./inventory) file and [`group_vars`](./group_vars) folder.  Alternatively you can use the `make environment/<environment-name>` command.
 5. Define a CloudFormation stack name in [`group_vars/all/vars.yml`](./group_vars/all/vars.yml) using the `Stack.Name` variable
 6. Add the ARN of the IAM role to assume in each environment by configuring the `Sts.Role` variable in `group_vars/<environment>/vars.yml`
 7. Define your CloudFormation template in [`templates/stack.yml.j2`](./templates/stack.yml.j2).  Alternatively you can reference a template included with the `aws-cloudformation` role by setting the `Stack.Template` variable to the path of the template relative to the `aws-cloudformation` role folder (e.g. `Stack.Template: templates/network.yml.j2`)
