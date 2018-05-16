@@ -27,7 +27,7 @@ See [brew.sh](http://brew.sh) for details on how to install Homebrew.
 Once Homebrew is installed you can install the latest version of Python 2.7 as follows:
 
 ```bash
-$ brew install python2
+$ brew install python@2
 ...
 ...
 ```
